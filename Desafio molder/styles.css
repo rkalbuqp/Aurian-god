@@ -1,0 +1,46 @@
+/* styles.css */
+
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    background-color: rgb(240, 23, 204);
+    color: rgb(240, 239, 243);
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button#close-modal {
+    background-color: pink;
+    color: rgb(10, 5, 5);
+}
+
+dialog {
+    display: none;
+    background-color: rgb(250, 251, 252);
+    color: rgb(4, 139, 163);
+    border: none;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 400px;
+    width: 100%;
+}
+
+dialog:target {
+    display: block;
+}
