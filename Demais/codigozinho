@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação: Importância das Soft Skills</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .slide {
+            display: none;
+            padding: 50px;
+            text-align: center;
+            box-sizing: border-box;
+            width: 80%;
+            height: 80%;
+            border: 2px solid #FFD700; /* Dourado */
+            border-radius: 10px;
+            position: relative;
+        }
+        .active {
+            display: block;
+        }
+        .title {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #FFD700; /* Dourado */
+            text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.7); /* Efeito dourado */
+        }
+        .content {
+            font-size: 1.5em;
+            line-height: 1.6;
+            text-align: left;
+        }
+        .content p, .content ul li {
+            margin: 15px 0;
+        }
+        .highlight {
+            color: #FFD700; /* Dourado */
+            font-weight: bold;
+        }
+        .footer {
+            position: fixed;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            color: #FF69B4; /* Rosa */
+            font-size: 1.2em;
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            position: fixed;
+            top: 50%;
+            width: 100%;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+        .nav-button {
+            background-color: #FF69B4; /* Rosa */
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+        .nav-button:hover {
+            background-color: #FFD700; /* Dourado */
+        }
+        .company-name {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            color: #FF69B4; /* Rosa */
+            font-size: 1.2em;
+        }
+        .note {
+            background-color: #2e2e2e;
+            padding: 10px;
+            border-radius: 5px;
+            color: #FFD700; /* Dourado */
+            font-style: italic;
+            margin-top: 20px;
+        }
+        .box {
+            border: 1px solid #FFD700;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .smart-art {
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .smart-art p {
+            margin: 5px 0;
+            color: #FFD700;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide active" id="slide1">
+        <div class="title">Soft Skill - Comunicação</div>
+        <div class="content">
+            <div class="highlight" style="text-align: left;">Oradora: Kassia Albuquerque</div>
+            <div class="box" style="float: right; width: 40%; margin-left: 20px;">
+                <p>Impacto das Soft Skills no Sucesso Profissional</p>
+                <p>Estratégias para Melhorar a Comunicação</p>
+                <p>Benefícios do Desenvolvimento de Soft Skills</p>
+            </div>
+            <p style="color: #00FFFF;">Hard skills vs. Soft skills</p>
+            <p style="color: #FF69B4;">Comunicação como soft skill crucial</p>
+            <p style="color: #00FF00;">Importância da comunicação eficaz no ambiente de trabalho</p>
+        </div>
+    </div>
+    <div class="slide" id="slide2">
+        <div class="title">Impacto das Soft Skills no Sucesso Profissional</div>
+        <div class="content">
+            <p style="color: #00FFFF; margin-bottom: 20px;">75% do sucesso profissional a longo prazo vem das soft skills (Stanford)</p>
+            <p style="color: #FF69B4; margin-bottom: 20px;">12% mais produtividade com treinamento em soft skills (Universidade de Boston)</p>
+            <div class="note">
+                <p class="highlight">"E foi assim que surgiu a Connection Future!"</p>
+            </div>
+        </div>
+    </div>
+    <div class="slide" id="slide3">
+        <div class="title">Razões para Aprimorar Soft Skills</div>
+        <div class="content">
+            <p style="color: #FFD700;">Crescimento profissional e comunicação</p>
+            <p style="color: #FF69B4;">Impactos negativos de uma má comunicação:</p>
+            <div class="box">
+                <ul>
+                    <li style="color: #00FF00;">Conflitos internos</li>
+                    <li style="color: #FF69B4;">Redução da produtividade</li>
+                    <li style="color: #FFD700;">Projetos mal executados</li>
+                    <li style="color: #00FFFF;">Desentendimentos entre departamentos</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="slide" id="slide4">
+        <div class="title">Diversos Modos de Comunicação</div>
+        <div class="content">
+            <ul>
+                <li style="color: #00FF00;">Conflitos internos</li>
+                <li style="color: #FF69B4;">Redução da produtividade</li>
+                <li style="color: #FFD700;">Projetos mal executados</li>
+                <li style="color: #00FFFF;">Desentendimentos entre departamentos</li>
+            </ul>
+        </div>
+    </div>
+    <div class="slide" id="slide5">
+        <div class="title">Estratégias para Melhorar a Comunicação</div>
+        <div class="content">
+            <div class="box">
+                <p style="color: #FFD700;">Utilizar a linguagem adequada para cada ocasião</p>
+                <p style="color: #FF69B4;">Promover clareza e transparência</p>
+                <p style="color: #00FF00;">Uso adequado de ferramentas digitais</p>
+            </div>
+        </div>
+    </div>
+    <div class="slide" id="slide6">
+        <div class="title">Benefícios do Desenvolvimento de Soft Skills</div>
+        <div class="content">
+            <p style="color: #FFD700;">Comunicação como uma soft skill fundamental</p>
+            <p style="color: #FF69B4;">Benefícios para a organização:</p>
+            <div class="box">
+                <ul>
+                    <li style="color: #00FF00;">Equipe mais coesa e produtiva</li>
+                    <li style="color: #FF69B4;">Satisfação no ambiente de trabalho</li>
+                </ul>
+            </div>
+            <p style="color: #00FFFF;">Integração de habilidades técnicas e de comunicação para sucesso a longo prazo</p>
+        </div>
+    </div>
+    <div class="slide" id="slide7">
+        <div class="title">Palavras-chave</div>
+        <div class="content">
+            <div class="box">
+                <p style="color: #FFD700;">Comunicação</p>
+                <p style="color: #FF69B4;">Soft skills</p>
+                <p style="color: #00FF00;">Técnicas de comunicação</p>
+                <p style="color: #00FFFF;">Ferramentas de comunicação</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">Connection Future - Aprimorando suas Soft Skills</div>
+    <div class="company-name">Connection Future</div>
+
+    <div class="navigation">
+        <button class="nav-button" onclick="prevSlide()">Anterior</button>
+        <button class="nav-button" onclick="nextSlide()">Próximo</button>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 7;
+
+        function showSlide(slideIndex) {
+            document.querySelectorAll('.slide').forEach(slide => slide.classList.remove('active'));
+            document.getElementById(`slide${slideIndex}`).classList.add('active');
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 1) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        }
+    </script>
+</body>
+</html>
