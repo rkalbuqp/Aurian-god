@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Desenvolvedora Front-end</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div id="sidebar">
+        <ul>
+            <li><a href="#sobre">Sobre Mim</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="#" id="switch-lang">English</a></li>
+        </ul>
+    </div>
+    <div id="main-content">
+        <section id="sobre">
+            <h1>Sobre Mim</h1>
+            <p>Concluí o curso no Estartando Devs, onde obtive certificação como Desenvolvedora Front-end. Durante minha formação, adquiri proficiência em diversas linguagens de programação, incluindo HTML, CSS e JavaScript, bem como em frameworks como React. Além das competências técnicas, desenvolvi habilidades interpessoais cruciais para o trabalho em equipe e para a gestão de microempresas. As aulas foram dinâmicas e envolveram a formação de grupos, que precisávamos gerenciar até a conclusão do currículo.</p>
+        </section>
+        <section id="skills">
+            <h1>Habilidades</h1>
+            <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>React, Angular</li>
+                <li>Gestão de Projetos</li>
+                <li>Trabalho em Equipe</li>
+                <li>Soft Skills</li>
+            </ul>
+        </section>
+        <section id="projetos">
+            <h1>Projetos</h1>
+            <ul>
+                <li>
+                    <a href="projeto1.html">Projeto 1</a>
+                    <span class="toggle" onclick="toggleProject('projeto1')">&#9660;</span>
+                    <div id="projeto1" class="project-description" style="display:none;">
+                        <p>Descrição do Projeto 1.</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="projeto2.html">Projeto 2</a>
+                    <span class="toggle" onclick="toggleProject('projeto2')">&#9660;</span>
+                    <div id="projeto2" class="project-description" style="display:none;">
+                        <p>Descrição do Projeto 2.</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="projeto3.html">Projeto 3</a>
+                    <span class="toggle" onclick="toggleProject('projeto3')">&#9660;</span>
+                    <div id="projeto3" class="project-description" style="display:none;">
+                        <p>Descrição do Projeto 3.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="contato">
+            <h1>Contato</h1>
+            <p>Email: exemplo@dominio.com</p>
+            <p>LinkedIn: <a href="#">Perfil no LinkedIn</a></p>
+        </section>
+    </div>
+
+    <!-- Conteúdo em Inglês -->
+    <div id="main-content-en" style="display:none;">
+        <section id="sobre">
+            <h1>About Me</h1>
+            <p>I studied at Estartando Devs and obtained certification as a Front-end Developer. During my course, I learned different programming languages such as HTML, CSS, JavaScript, and frameworks like React. Besides hard skills, I developed essential soft skills for teamwork and microenterprise management through dynamic classes where we formed groups that we had to manage until the end of the curriculum.</p>
+        </section>
+        <section id="skills">
+            <h1>Skills</h1>
+            <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>React, Angular</li>
+                <li>Project Management</li>
+                <li>Teamwork</li>
+                <li>Soft Skills</li>
+            </ul>
+        </section>
+        <section id="projetos">
+            <h1>Projects</h1>
+            <ul>
+                <li>
+                    <a href="projeto1.html">Project 1</a>
+                    <span class="toggle" onclick="toggleProject('project1')">&#9660;</span>
+                    <div id="project1" class="project-description" style="display:none;">
+                        <p>Project 1 Description.</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="projeto2.html">Project 2</a>
+                    <span class="toggle" onclick="toggleProject('project2')">&#9660;</span>
+                    <div id="project2" class="project-description" style="display:none;">
+                        <p>Project 2 Description.</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="projeto3.html">Project 3</a>
+                    <span class="toggle" onclick="toggleProject('project3')">&#9660;</span>
+                    <div id="project3" class="project-description" style="display:none;">
+                        <p>Project 3 Description.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="contato">
+            <h1>Contact</h1>
+            <p>Email: example@domain.com</p>
+            <p>LinkedIn: <a href="#">LinkedIn Profile</a></p>
+        </section>
+    </div>
+
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>
