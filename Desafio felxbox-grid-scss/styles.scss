@@ -1,18 +1,23 @@
 $font-family: Arial, sans-serif;
 $background-color: black;
 $item-bg-color: rgb(3, 76, 105);
-
+$ncolunas: 4;
 // Estilos em SCSS
 body {
   font-family: $font-family;
   background-color: $background-color;
 }
 
+@function calculate-percentage($ncolunas) {
+  @return 100% / $ncolunas;
+}
+
 .container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   font-family: $font-family;
   background-color: $background-color;
+  grid-template-columns: repeat($ncolunas, calculate-percentage($ncolunas));
+
   align-self: auto;
   align-content: center;
   justify-content: space-around;
