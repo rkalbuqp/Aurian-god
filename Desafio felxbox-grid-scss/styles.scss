@@ -1,0 +1,40 @@
+// Definição das variáveis
+$font-family: Arial, sans-serif;
+$background-color: black;
+$item-bg-color: rgb(3, 76, 105);
+
+// Função para calcular porcentagem
+@function calculate-percentage($num-columns, $total-columns) {
+  // Calcula a largura em porcentagem
+  @return percentage($num-columns / $total-columns);
+}
+
+// Estilos em SCSS
+body {
+  font-family: $font-family;
+  background-color: $background-color;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: $font-family;
+  background-color: $background-color;
+  align-self: auto;
+  align-content: center;
+  justify-content: space-around;
+}
+
+.item {
+  color: white;
+  background-color: $item-bg-color;
+  padding: 10px;
+  border: 2px solid #ccc;
+  margin-bottom: 40px;
+  align-self: auto;
+}
+
+// Exemplo de uso da função calculate-percentage
+.coluna {
+  width: calculate-percentage(2, 4); // 2 colunas de um total de 4 colunas
+}

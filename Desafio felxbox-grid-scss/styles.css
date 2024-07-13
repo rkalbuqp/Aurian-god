@@ -1,0 +1,27 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  align-self: auto;
+  align-content: center;
+  justify-content: space-around;
+}
+
+.item {
+  color: white;
+  background-color: rgb(3, 76, 105);
+  padding: 10px;
+  border: 2px solid #ccc;
+  margin-bottom: 40px;
+  align-self: auto;
+}
+
+.coluna {
+  width: 50%;
+}/*# sourceMappingURL=styles.css.map */
