@@ -1,0 +1,48 @@
+// Definição das cores para os temas
+$theme-colors: (
+  light: (
+    background: #ffffff,
+    text: #333333,
+  ),
+  dark: (
+    background: #333333,
+    text: #ffffff,
+  ),
+);
+
+// Definição dos estilos base
+body {
+  font-family: Arial, sans-serif;
+  background-color: map-get(map-get($theme-colors, light), background);
+  color: map-get(map-get($theme-colors, light), text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  
+  &:hover {
+    background-color: #2980b9;
+  }
+}
+
+// Estilo para o modo escuro
+.dark-mode {
+  background-color: map-get(map-get($theme-colors, dark), background);
+  color: map-get(map-get($theme-colors, dark), text);
+}
