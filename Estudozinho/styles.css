@@ -1,0 +1,31 @@
+body {
+    font-family: sans-serif;
+    background-color: black;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.name {
+    flex: 1 0 140px;
+    border-radius: 0.5rem;
+    border-style: none;
+}
+
+.email {
+    flex: 1 0 120px;
+    border-radius: 0.5rem;
+    border-style: none;
+}
+
+button {
+    flex: 1 0 60px;
+    background-color: rgb(245, 43, 167);
+    margin: 0.05rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border-style: none;
+}
