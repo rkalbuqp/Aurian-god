@@ -12,15 +12,30 @@ body {
   @return 100% / $ncolunas;
 }
 
+@mixin tamanhotela($ncolunas) {
+  grid-template-columns: repeat($ncolunas, calculate-percentage($ncolunas));
+}
+
 .container {
+  @include tamanhotela(4);
   display: grid;
   font-family: $font-family;
   background-color: $background-color;
-  grid-template-columns: repeat($ncolunas, calculate-percentage($ncolunas));
-
   align-self: auto;
   align-content: center;
   justify-content: space-around;
+
+  @media (max-width: 1000px) {
+    @include tamanhotela(3);
+  }
+
+  @media (max-width: 800px) {
+    @include tamanhotela(2);
+  }
+
+  @media (max-width: 600px) {
+    @include tamanhotela(1);
+  }
 }
 
 .item {
@@ -28,6 +43,7 @@ body {
   background-color: $item-bg-color;
   padding: 10px;
   border: 2px solid #ccc;
+  border-radius: 10px;
   margin-bottom: 40px;
   align-self: auto;
 }

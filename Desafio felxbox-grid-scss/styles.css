@@ -3,19 +3,29 @@ body {
   background-color: black; }
 
 .container {
+  grid-template-columns: repeat(4, 25%);
   display: grid;
   font-family: Arial, sans-serif;
   background-color: black;
-  grid-template-columns: repeat(4, 25%);
   align-self: auto;
   align-content: center;
   justify-content: space-around; }
+  @media (max-width: 1000px) {
+    .container {
+      grid-template-columns: repeat(3, 33.3333333333%); } }
+  @media (max-width: 800px) {
+    .container {
+      grid-template-columns: repeat(2, 50%); } }
+  @media (max-width: 600px) {
+    .container {
+      grid-template-columns: repeat(1, 100%); } }
 
 .item {
   color: white;
   background-color: #034c69;
   padding: 10px;
   border: 2px solid #ccc;
+  border-radius: 10px;
   margin-bottom: 40px;
   align-self: auto; }
 
