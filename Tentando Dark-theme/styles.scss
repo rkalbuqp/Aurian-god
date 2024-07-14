@@ -1,0 +1,45 @@
+$theme-colors: (
+    light: (
+        background: white,
+        text: black,
+    ),
+    dark: (
+        background: black,
+        text: white,
+    ),
+);
+
+body {
+    font-family: Verdana, sans-serif;
+    background-color: map-get(map-get($theme-colors, light), background);
+    color: map-get(map-get($theme-colors, light), text );
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: rgb(13, 212, 212);
+    color: black;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+        background-color: #11a7cc;
+    }
+}
+
+.dark-mode {
+    background-color: map-get(map-get($theme-colors, dark), background);
+    color: map-get(map-get($theme-colors, dark), text);
+}

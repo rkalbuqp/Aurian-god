@@ -1,0 +1,33 @@
+body {
+  font-family: Verdana, sans-serif;
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: rgb(13, 212, 212);
+  color: black;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.button:hover {
+  background-color: #11a7cc;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}/*# sourceMappingURL=styles.css.map */
