@@ -9,31 +9,29 @@ $theme-colors: (
   ),
 );
 
-@function theme-color($theme, $property) {
-  @return map-get(map-get($theme-colors, $theme), $property);
+
+@mixin theme($theme-key) {
+  $colors: map-get($theme-colors, $theme-key);
+  
+  background-color: map-get($colors, background-color);
+  color: map-get($colors, color);
 }
 
-@mixin transition-theme($theme) {
-  body {
-    background-color: theme-color($theme, background-color);
-    color: theme-color($theme, color);
-  }
 
-  .button-here:focus ~ .container {
-    background-color: theme-color($theme, background-color);
-    color: theme-color($theme, color);
-  }
+
+.light-mode {
+  @include theme(light);
 }
+
+.dark-mode {
+  @include theme(dark);
+}
+
 
 body {
-  font-family: Verdana, sans-serif;
-  background-color: theme-color(light, background-color);
-  color: theme-color(light, color);
+  font-family: Arial, sans-serif;
   transition: background-color 0.3s, color 0.3s;
-}
-
-.dark-theme {
-  @include transition-theme(dark);
+  @include light-mode; // Aplica o tema light ao body por padrão
 }
 
 .container {
@@ -42,8 +40,8 @@ body {
 }
 
 .title {
-  text-align: center;
-  color: rgb(231, 32, 182);
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 .button-here {
@@ -53,8 +51,11 @@ body {
   border: none;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: #0e728b;
+  }
+  
+    @include dark-mode;
+  
 }
-
-
-
-
