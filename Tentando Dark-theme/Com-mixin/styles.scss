@@ -1,55 +1,60 @@
 $theme-colors: (
-    light: (
-        background: white,
-        text: black,
-    ),
-    dark: (
-        background: black,
-        text: white,
-    ),
+  light: (
+    background-color: white,
+    color: black,
+  ),
+  dark: (
+    background-color: black,
+    color: white,
+  ),
 );
 
-@function theme-color($theme, $type) {
-    @return map-get(map-get($theme-colors, $theme), $type);
+@function theme-color($theme, $property) {
+  @return map-get(map-get($theme-colors, $theme), $property);
 }
 
-@mixin generate-theme($theme) {
-    .#{$theme}-mode {
-        background-color: theme-color($theme, background);
-        color: theme-color($theme, text);
-    }
+@mixin transition-theme($theme) {
+  body {
+    background-color: theme-color($theme, background-color);
+    color: theme-color($theme, color);
+  }
+
+  .button-here:focus ~ .container {
+    background-color: theme-color($theme, background-color);
+    color: theme-color($theme, color);
+  }
 }
 
 body {
-    font-family: Verdana, sans-serif;
-    background-color: theme-color(light, background);
-    color: theme-color(light, text);
-    transition: background-color 0.3s, color 0.3s;
+  font-family: Verdana, sans-serif;
+  background-color: theme-color(light, background-color);
+  color: theme-color(light, color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-theme {
+  @include transition-theme(dark);
 }
 
 .container {
-    text-align: center;
-    margin-top: 100px;
+  text-align: center;
+  margin-top: 100px;
 }
 
 .title {
-    font-size: 2rem;
-    margin-bottom: 20px;
+  text-align: center;
+  color: rgb(231, 32, 182);
 }
 
-.button {
-    padding: 10px 20px;
-    background-color: rgb(13, 212, 212);
-    color: black;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-
-    &:hover {
-        background-color: #11a7cc;
-    }
+.button-here {
+  padding: 10px 20px;
+  background-color: rgb(13, 212, 212);
+  color: black;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-// Gerar classes de tema usando o mixin
-@include generate-theme(light);
-@include generate-theme(dark);
+
+
+

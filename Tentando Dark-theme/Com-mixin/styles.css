@@ -5,34 +5,30 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
+.dark-theme body {
+  background-color: black;
+  color: white;
+}
+.dark-theme .button-here:focus ~ .container {
+  background-color: black;
+  color: white;
+}
+
 .container {
   text-align: center;
   margin-top: 100px;
 }
 
 .title {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  text-align: center;
+  color: rgb(231, 32, 182);
 }
 
-.button {
+.button-here {
   padding: 10px 20px;
   background-color: rgb(13, 212, 212);
   color: black;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
-}
-.button:hover {
-  background-color: #11a7cc;
-}
-
-.light-mode {
-  background-color: white;
-  color: black;
-}
-
-.dark-mode {
-  background-color: black;
-  color: white;
 }/*# sourceMappingURL=styles.css.map */
