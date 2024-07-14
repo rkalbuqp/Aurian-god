@@ -9,10 +9,21 @@ $theme-colors: (
     ),
 );
 
+@function theme-color($theme, $type) {
+    @return map-get(map-get($theme-colors, $theme), $type);
+}
+
+@mixin generate-theme($theme) {
+    .#{$theme}-mode {
+        background-color: theme-color($theme, background);
+        color: theme-color($theme, text);
+    }
+}
+
 body {
     font-family: Verdana, sans-serif;
-    background-color: map-get(map-get($theme-colors, light), background);
-    color: map-get(map-get($theme-colors, light), text );
+    background-color: theme-color(light, background);
+    color: theme-color(light, text);
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -39,7 +50,6 @@ body {
     }
 }
 
-.dark-mode {
-    background-color: map-get(map-get($theme-colors, dark), background);
-    color: map-get(map-get($theme-colors, dark), text);
-}
+// Gerar classes de tema usando o mixin
+@include generate-theme(light);
+@include generate-theme(dark);

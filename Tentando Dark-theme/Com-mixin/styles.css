@@ -27,6 +27,11 @@ body {
   background-color: #11a7cc;
 }
 
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
 .dark-mode {
   background-color: black;
   color: white;
