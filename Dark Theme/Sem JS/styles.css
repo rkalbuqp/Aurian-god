@@ -1,0 +1,57 @@
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --button-bg-color: fuchsia;
+  --button-text-color: #ffffff;
+  --h1-text-color: aqua;
+}
+
+:root:has(#tema:checked) {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --button-bg-color: fuchsia;
+  --button-text-color: #121212;
+  --h1-text-color: aqua;
+}
+
+body {
+  transition: background-color 0.3s, color 0.3s;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  transition: background-color 0.3s, color 0.3s;
+  border: none;
+  margin-top: 20px;
+}
+
+.text-button {
+  font-family: Verdana, sans-serif;
+  font-size: 0.8rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}/*# sourceMappingURL=styles.css.map */
