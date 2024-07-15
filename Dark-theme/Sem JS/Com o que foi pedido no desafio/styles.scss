@@ -15,71 +15,33 @@ $themes: (
   )
 );
 
-// Função para retornar a cor baseada no tema e tipo de cor
-@function theme-color($theme, $color-type) {
-  @return map-get(map-get($themes, $theme), $color-type);
-}
+@mixin apply-theme($theme) {
+  background-color: map-get($theme, background);
+  color: map-get($theme, text);
 
-// Mixin para gerar classes de tema usando loops e condicionais
-@mixin generate-theme($themes) {
-  :root {
-    --background-color: theme-color(light, background);
-    --text-color: theme-color(light, text);
-    --button-bg-color: theme-color(light, button-bg);
-    --button-text-color: theme-color(light, button-text);
-    --h1-text-color: theme-color(light, h1-text);
+  .button {
+    background-color: map-get($theme, button-bg);
+    color: map-get($theme, button-text);
   }
 
-  :root:has(#tema:checked) {
-    --background-color: theme-color(dark, background);
-    --text-color: theme-color(dark, text);
-    --button-bg-color: theme-color(dark, button-bg);
-    --button-text-color: theme-color(dark, button-text);
-    --h1-text-color: theme-color(dark, h1-text);
+  h1 {
+    color: map-get($theme, h1-text);
   }
 }
 
-@include generate-theme($themes);
+// Loop through themes and generate styles
+@each $theme-name, $theme in $themes {
+  .theme-#{$theme-name} {
+    @include apply-theme($theme);
+  }
+}
 
-// Estilos adicionais
+// Default light theme
 body {
-  transition: background-color 0.3s, color 0.3s;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  margin: 0;
+  @include apply-theme(map-get($themes, light));
 }
 
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  flex-direction: column;
-}
-
-.button {
-  cursor: pointer;
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: var(--button-bg-color);
-  color: var(--button-text-color);
-  transition: background-color 0.3s, color 0.3s;
-  border: none;
-  margin-top: 20px;
-}
-
-.text-button {
-  font-family: Verdana, sans-serif;
-  font-size: 0.8rem;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
+// Apply dark theme when #tema is checked
+:root:has(#tema:checked) {
+  @include apply-theme(map-get($themes, dark));
 }
