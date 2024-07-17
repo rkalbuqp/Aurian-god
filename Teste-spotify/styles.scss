@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(15, 12, 16, 1);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    position: relative;
+    width: 390px;
+    height: 319px;
+    background-color: rgba(18, 18, 18, 1);
+
+    .album-cover {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .band-info {
+        position: absolute;
+        bottom: 16px;
+        left: 16px;
+
+        h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .button {
+            background-color: #1DB954;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+    }
+}
+
+.main {
+    width: 390px;
+    height: 526px;
+    position: absolute;
+    top: 318px;
+    padding: 16px;
+    background-color: rgba(18, 18, 18, 1);
+    overflow-y: auto;
+
+    .listeners {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+
+    .popular {
+        margin-bottom: 16px;
+
+        h2 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .track {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+
+            img {
+                width: 50px;
+                height: 50px;
+                margin-right: 8px;
+            }
+
+            .track-info {
+                flex: 1;
+
+                h3 {
+                    font-size: 16px;
+                    margin: 0;
+                }
+
+                p {
+                    font-size: 12px;
+                    margin: 0;
+                    color: #b3b3b3;
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    width: 390px;
+    height: 92px;
+    position: absolute;
+    top: 752px;
+    padding: 16px 56px 56px 56px;
+    display: flex;
+    justify-content: space-around;
+    gap: 42px;
+    background: linear-gradient(180deg, rgba(18, 18, 18, 0) 0%, rgba(18, 18, 18, 0.8) 14.58%, #121212 40.39%);
+
+    img {
+        width: 24px;
+        height: 24px;
+    }
+}
